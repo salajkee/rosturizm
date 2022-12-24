@@ -1543,6 +1543,7 @@ body {
   gap: 32px;
 }
 .popular-categories__link img {
+  width: 100%;
   border-radius: 15px;
 }
 
@@ -1578,6 +1579,7 @@ body {
   gap: 32px;
 }
 .discounts__link img {
+  width: 100%;
   border-radius: 15px;
 }
 

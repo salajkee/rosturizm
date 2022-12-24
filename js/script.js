@@ -62,7 +62,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             });
-    
+            
             menuFirsts.forEach(first => {
                 first.addEventListener('mouseover', (e) => {
                     let target = e.target;
@@ -121,7 +121,9 @@ window.addEventListener('DOMContentLoaded', () => {
     } catch(e){}
 
     try {
+        const screenWidth = window.screen.width;
         const menuBtn = document.querySelector('.navbar-mobile__menu');
+        const menuHome = document.querySelector('.navbar-mobile__home');
         const navBarLinks = document.querySelectorAll('.navbar-mobile__link');
         const burgerMenu = document.querySelector('.burger-menu');
         const burgerMenuWrapper = document.querySelector('.burger-menu__wrapper');
@@ -131,71 +133,115 @@ window.addEventListener('DOMContentLoaded', () => {
         const menuFirstLinks = document.querySelectorAll('.burger-menu__first-link');
         const arrowPrev = burgerMenuWrapper.querySelectorAll('.arrow-prev');
 
-        menuBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            burgerMenu.classList.toggle('active');
-            burgerMenuWrapper.classList.toggle('active');
-        });
-
-        burgerMenu.addEventListener('click', (event) => {
-            let target = event.target;
-            if(target.classList.contains('burger-menu__link')) {
-                event.preventDefault();
-                let menuList = target.parentNode;
-                let listNum = menuList.getAttribute('data-list');
-                let menuFirst = document.querySelector(`.burger-menu__first-${listNum}`);
-
-                menuList.classList.add('active');
-                if(menuFirst !== null) {
-                    menuFirst.classList.add('active');
-                } else {
-                    return menuFirst;
-                }
-            }
-        });
-
-        menuFirstLinks.forEach(link => {
-            let menuList = link.parentNode;
-            let listNum = menuList.getAttribute('data-list');
-            let menuSecond = document.querySelector(`.burger-menu__second-${listNum}`);
-            if(menuSecond !== null) {
-                menuList.classList.add('hover');
-                link.addEventListener('click', (e) => e.preventDefault());
-            } else {
-                return menuSecond;
-            }
-        });
-
-        menuFirsts.forEach(first => {
-            first.addEventListener('click', (e) => {
-                let target = e.target;
-                if(target.classList.contains('burger-menu__first-link')) {
-                    menuSeconds.forEach(second => {
-                        second.classList.remove('active');
-                    });
-                    let menuFirstLists = document.querySelectorAll('.burger-menu__first-list');
-                    menuFirstLists.forEach(firstList => {
-                        firstList.classList.remove('hover');
-                    });
+        if(screenWidth < 1024) {
+            menuBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                burgerMenu.classList.toggle('active');
+                burgerMenuWrapper.classList.toggle('active');
+            });
+    
+            burgerMenu.addEventListener('click', (event) => {
+                let target = event.target;
+                if(target.classList.contains('burger-menu__link')) {
+                    event.preventDefault();
                     let menuList = target.parentNode;
                     let listNum = menuList.getAttribute('data-list');
-                    let menuSecond = document.querySelector(`.burger-menu__second-${listNum}`);
-                    if(menuSecond !== null) {
-                        menuList.classList.add('hover');
-                        menuSecond.classList.add('active');
+                    let menuFirst = document.querySelector(`.burger-menu__first-${listNum}`);
+    
+                    menuList.classList.add('active');
+                    if(menuFirst !== null) {
+                        menuFirst.classList.add('active');
                     } else {
-                        return menuSecond;
+                        return menuFirst;
                     }
                 }
             });
-        });
-
-        arrowPrev.forEach(prevBtn => {
-            prevBtn.addEventListener('click', () => {
-                prevBtn.parentNode.parentNode.classList.remove('active');
+    
+            menuFirstLinks.forEach(link => {
+                let menuList = link.parentNode;
+                let listNum = menuList.getAttribute('data-list');
+                let menuSecond = document.querySelector(`.burger-menu__second-${listNum}`);
+                if(menuSecond !== null) {
+                    menuList.classList.add('hover');
+                    link.addEventListener('click', (e) => e.preventDefault());
+                } else {
+                    return menuSecond;
+                }
             });
-        });      
+    
+            menuFirsts.forEach(first => {
+                first.addEventListener('click', (e) => {
+                    let target = e.target;
+                    if(target.classList.contains('burger-menu__first-link')) {
+                        menuSeconds.forEach(second => {
+                            second.classList.remove('active');
+                        });
+                        let menuFirstLists = document.querySelectorAll('.burger-menu__first-list');
+                        menuFirstLists.forEach(firstList => {
+                            firstList.classList.remove('hover');
+                        });
+                        let menuList = target.parentNode;
+                        let listNum = menuList.getAttribute('data-list');
+                        let menuSecond = document.querySelector(`.burger-menu__second-${listNum}`);
+                        if(menuSecond !== null) {
+                            menuList.classList.add('hover');
+                            menuSecond.classList.add('active');
+                        } else {
+                            return menuSecond;
+                        }
+                    }
+                });
+            });
+    
+            arrowPrev.forEach(prevBtn => {
+                prevBtn.addEventListener('click', () => {
+                    prevBtn.parentNode.parentNode.classList.remove('active');
+                });
+            });
+
+            menuBtn.addEventListener('click', function() {
+                if(!menuBtn.classList.contains('active')) {
+                    navBarLinks.forEach(navBarLink => {
+                        navBarLink.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                } else {
+                    this.classList.remove('active');
+                    this.previousElementSibling.classList.add('active');
+                }
+            });
+
+            menuHome.addEventListener('click', function() {
+                if(!menuHome.classList.contains('active')) {
+                    burgerMenuWrapper.classList.remove('active');
+                    burgerMenu.classList.remove('active');
+                    navBarLinks.forEach(navBarLink => {
+                        navBarLink.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+            });
+        }
     } catch(e){}
+
+    try {
+        const currencyList = document.querySelectorAll('.header__top-current-list');
+        const headerFlag = document.querySelector('.header__top-flag');
+        const headerCurrency = document.querySelector('.header__top-currency');
+        
+        currencyList.forEach(list => {
+            list.addEventListener('click', function() {
+                currencyList.forEach(listt => {
+                    listt.classList.remove('active');
+                });
+                this.classList.add('active');
+                let srcImg = this.children[0].getAttribute('src');
+                let currency = this.children[1];
+                headerFlag.children[0].setAttribute('src', srcImg);
+                headerCurrency.textContent = currency.textContent;
+            });
+        });
+    } catch(e) {}
 
     try {
         const swiper = new Swiper(".banner__slider", {
@@ -216,6 +262,46 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         });
     } catch(e){}
+
+    try {
+        const screenWidth = window.screen.width;
+
+        if(screenWidth < 960) {
+            const swiper2 = new Swiper(".popular-categories__slider", {
+                slidesPerView: 1,
+                fadeEffect: { crossFade: true },
+                virtualTranslate: true,
+                speed: 800,
+                autoplayDisableOnInteraction: true,
+                slidersPerView: 1,
+                effect: "fade",
+                pagination: {
+                  el: ".swiper-pagination",
+                  dynamicBullets: true,
+                },
+            });
+        }
+    } catch(e) {}
+
+    try {
+        const screenWidth = window.screen.width;
+
+        if(screenWidth < 960) {
+            const swiper3 = new Swiper(".discounts__slider", {
+                slidesPerView: 1,
+                fadeEffect: { crossFade: true },
+                virtualTranslate: true,
+                speed: 800,
+                autoplayDisableOnInteraction: true,
+                slidersPerView: 1,
+                effect: "fade",
+                pagination: {
+                  el: ".swiper-pagination",
+                  dynamicBullets: true,
+                },
+            });
+        }
+    } catch(e) {}
 
     try {
         const footerItem = document.querySelectorAll('.footer__item-title');

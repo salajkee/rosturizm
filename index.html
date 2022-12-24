@@ -22,24 +22,26 @@
                                     </span>
                                     <span class="header__top-currency">RUB</span>
                                 </div>
-                                <ul class="header__top-current-menu">
-                                    <p class="header__top-current-country-title">Выберите валюту</p>
-                                    <li class="header__top-current-list active">
-                                        <img class="header__top-current-flag" src="images/flags/rub.svg" alt="">
-                                        <p class="header__top-current-currency">RUB</p>
-                                        <p class="header__top-current-currency-name">Российский рубль</p>
-                                    </li>
-                                    <li class="header__top-current-list">
-                                        <img class="header__top-current-flag" src="images/flags/kaz.svg" alt="">
-                                        <p class="header__top-current-currency">KAZ</p>
-                                        <p class="header__top-current-currency-name">Казахстанский тенге</p>
-                                    </li>
-                                    <li class="header__top-current-list">
-                                        <img class="header__top-current-flag" src="images/flags/byn.svg" alt="">
-                                        <p class="header__top-current-currency">BYN</p>
-                                        <p class="header__top-current-currency-name">Белорусский рубль</p>
-                                    </li>
-                                </ul>
+                                <div class="header__top-current-wrapper">
+                                    <ul class="header__top-current-menu">
+                                        <p class="header__top-current-country-title">Выберите валюту</p>
+                                        <li class="header__top-current-list active">
+                                            <img class="header__top-current-flag" src="images/flags/rub.svg" alt="">
+                                            <p class="header__top-current-currency">RUB</p>
+                                            <p class="header__top-current-currency-name">Российский рубль</p>
+                                        </li>
+                                        <li class="header__top-current-list">
+                                            <img class="header__top-current-flag" src="images/flags/kaz.svg" alt="">
+                                            <p class="header__top-current-currency">KAZ</p>
+                                            <p class="header__top-current-currency-name">Казахстанский тенге</p>
+                                        </li>
+                                        <li class="header__top-current-list">
+                                            <img class="header__top-current-flag" src="images/flags/byn.svg" alt="">
+                                            <p class="header__top-current-currency">BYN</p>
+                                            <p class="header__top-current-currency-name">Белорусский рубль</p>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                             <li class="header__top-list header__top-location">
                                 <div class="header__top-location-icon">
@@ -76,14 +78,21 @@
                             </button>
                             <input class="header__bot-search-input" type="type" placeholder="Я ищу...">
                         </form>
-                        <a href="#" class="header__bot-address">
-                            <svg class="address-icon">
-                                <use xlink:href="sprite.svg#location-icon"></use>
-                            </svg>
-                            <p class="header__bot-address-text">
-                                Адреса
-                            </p>
-                        </a>
+                        <div class="header__bot-address-wrapper">
+                            <a href="#" class="header__bot-address">
+                                <svg class="address-icon">
+                                    <use xlink:href="sprite.svg#location-icon"></use>
+                                </svg>
+                                <p class="header__bot-address-text">
+                                    Адреса
+                                </p>
+                            </a>
+                            <div class="header__bot-address-num-wrapper">
+                                <div class="header__bot-address-num">
+                                    <span>25 823</span> пункта выдачи
+                                </div>
+                            </div>
+                        </div>
                         <a href="#" class="header__bot-login">
                             <svg class="pc-icon">
                                 <use xlink:href="sprite.svg#pc-icon"></use>
@@ -338,7 +347,7 @@
                         <li class="goods__item">
                             <a href="#" class="goods__card">
                                 <div class="goods__card-img">
-                                    <img src="images/good-img.png" alt="good-img">
+                                    <img src="images/1.jpg" alt="good-img">
                                 </div>
                                 <div class="goods__card-info">
                                     <div class="goods__card-price-block">
@@ -354,23 +363,7 @@
                         <li class="goods__item">
                             <a href="#" class="goods__card">
                                 <div class="goods__card-img">
-                                    <img src="images/good-img.png" alt="good-img">
-                                </div>
-                                <div class="goods__card-info">
-                                    <div class="goods__card-price-block">
-                                        <span class="goods__card-price-now">449 ₽</span>
-                                        <span class="goods__card-price-last">1 088 ₽</span>
-                                    </div>
-                                    <p class="goods__card-description">
-                                        Крем-спрей для волос 15в1, 250 мл
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="goods__item">
-                            <a href="#" class="goods__card">
-                                <div class="goods__card-img">
-                                    <img src="images/good-img.png" alt="good-img">
+                                    <img src="images/2.jpg" alt="good-img">
                                 </div>
                                 <div class="goods__card-info">
                                     <div class="goods__card-price-block">
@@ -386,7 +379,7 @@
                         <li class="goods__item">
                             <a href="#" class="goods__card">
                                 <div class="goods__card-img">
-                                    <img src="images/good-img.png" alt="good-img">
+                                    <img src="images/1.jpg" alt="good-img">
                                 </div>
                                 <div class="goods__card-info">
                                     <div class="goods__card-price-block">
@@ -402,7 +395,23 @@
                         <li class="goods__item">
                             <a href="#" class="goods__card">
                                 <div class="goods__card-img">
-                                    <img src="images/good-img.png" alt="good-img">
+                                    <img src="images/2.jpg" alt="good-img">
+                                </div>
+                                <div class="goods__card-info">
+                                    <div class="goods__card-price-block">
+                                        <span class="goods__card-price-now">449 ₽</span>
+                                        <span class="goods__card-price-last">1 088 ₽</span>
+                                    </div>
+                                    <p class="goods__card-description">
+                                        LK Level King / Худи для девочки Толстовка с капюшоном детская Кофта
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="goods__item">
+                            <a href="#" class="goods__card">
+                                <div class="goods__card-img">
+                                    <img src="images/1.jpg" alt="good-img">
                                 </div>
                                 <div class="goods__card-info">
                                     <div class="goods__card-price-block">
@@ -418,7 +427,7 @@
                         <li class="goods__item">
                             <a href="#" class="goods__card">
                                 <div class="goods__card-img">
-                                    <img src="images/good-img.png" alt="good-img">
+                                    <img src="images/2.jpg" alt="good-img">
                                 </div>
                                 <div class="goods__card-info">
                                     <div class="goods__card-price-block">
@@ -426,7 +435,7 @@
                                         <span class="goods__card-price-last">1 088 ₽</span>
                                     </div>
                                     <p class="goods__card-description">
-                                        Крем-спрей для волос 15в1, 250 мл
+                                        LK Level King / Худи для девочки Толстовка с капюшоном детская Кофта
                                     </p>
                                 </div>
                             </a>
@@ -434,7 +443,7 @@
                         <li class="goods__item">
                             <a href="#" class="goods__card">
                                 <div class="goods__card-img">
-                                    <img src="images/good-img.png" alt="good-img">
+                                    <img src="images/2.jpg" alt="good-img">
                                 </div>
                                 <div class="goods__card-info">
                                     <div class="goods__card-price-block">
@@ -442,7 +451,7 @@
                                         <span class="goods__card-price-last">1 088 ₽</span>
                                     </div>
                                     <p class="goods__card-description">
-                                        Крем-спрей для волос 15в1, 250 мл
+                                        LK Level King / Худи для девочки Толстовка с капюшоном детская Кофта
                                     </p>
                                 </div>
                             </a>
@@ -485,18 +494,21 @@
             <section class="popular-categories">
                 <div class="container">
                     <h2 class="popular-categories__title">Популярные категории</h2>
-                    <ul class="popular-categories__list">
-                        <li class="popular-categories__item">
-                            <a href="#" class="popular-categories__link">
-                                <img class="discounts__img" src="images/discounts-bannerr.png" alt="discounts-img">
-                            </a>
-                        </li>
-                        <li class="popular-categories__item">
-                            <a href="#" class="popular-categories__link">
-                                <img class="discounts__img" src="images/discounts-bannerr.png" alt="discounts-img">
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="popular-categories__slider">
+                        <ul class="popular-categories__list swiper-wrapper">
+                            <li class="popular-categories__item swiper-slide">
+                                <a href="#" class="popular-categories__link">
+                                    <img class="discounts__img" src="images/discounts-bannerr.png" alt="discounts-img">
+                                </a>
+                            </li>
+                            <li class="popular-categories__item swiper-slide">
+                                <a href="#" class="popular-categories__link">
+                                    <img class="discounts__img" src="images/discounts-bannerr.png" alt="discounts-img">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
             </section>
 
@@ -734,18 +746,21 @@
             <section class="discounts">
                 <div class="container">
                     <h2 class="discounts__title">Акции</h2>
-                    <ul class="discounts__list">
-                        <li class="discounts__item">
-                            <a href="#" class="discounts__link">
-                                <img class="discounts__img" src="images/discounts-bannerr.png" alt="discounts-img">
-                            </a>
-                        </li>
-                        <li class="discounts__item">
-                            <a href="#" class="discounts__link">
-                                <img class="discounts__img" src="images/discounts-bannerr.png" alt="discounts-img">
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="discounts__slider">
+                        <ul class="discounts__list swiper-wrapper">
+                            <li class="discounts__item swiper-slide">
+                                <a href="#" class="discounts__link">
+                                    <img class="discounts__img" src="images/discounts-bannerr.png" alt="discounts-img">
+                                </a>
+                            </li>
+                            <li class="discounts__item swiper-slide">
+                                <a href="#" class="discounts__link">
+                                    <img class="discounts__img" src="images/discounts-bannerr.png" alt="discounts-img">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
             </section>
 
@@ -1490,7 +1505,7 @@
         </footer>
 
         <div class="navbar-mobile">
-            <a href="#" class="navbar-mobile__link active">
+            <a href="#" class="navbar-mobile__link navbar-mobile__home active">
                 <svg class="home-icon navbar-icon">
                     <use xlink:href="sprite.svg#home-icon"></use>
                 </svg>

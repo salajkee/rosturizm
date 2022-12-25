@@ -16,8 +16,8 @@
     </symbol>
 
     <symbol id="close-icon" viewBox="0 0 22 22">
-        <rect y="19.799" width="28" height="4" rx="2" transform="rotate(-45 0 19.799)" fill="white"/>
-        <rect x="19.799" y="22.6274" width="28" height="4" rx="2" transform="rotate(-135 19.799 22.6274)" fill="white"/>
+        <rect y="19.799" width="28" height="4" rx="2" transform="rotate(-45 0 19.799)"/>
+        <rect x="19.799" y="22.6274" width="28" height="4" rx="2" transform="rotate(-135 19.799 22.6274)"/>
     </symbol>
 
     <symbol id="botArrow-icon" viewBox="0 0 14 8">

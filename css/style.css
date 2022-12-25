@@ -1004,6 +1004,106 @@ body {
   fill: #cccccc;
 }
 
+.popup-country {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+}
+.popup-country.active {
+  z-index: 6;
+  opacity: 1;
+  visibility: visible;
+}
+.popup-country__close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+.popup-country__close-btn .close-icon {
+  width: 15px;
+  height: 22px;
+  fill: #8B8B8B;
+}
+.popup-country__current-menu {
+  height: 100%;
+  padding: 20px 0 20px;
+  background: #fff;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.popup-country__current-country-title {
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 22px;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: 700;
+  margin: 0 0 12px;
+  white-space: nowrap;
+}
+.popup-country__current-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 40px 8px 20px;
+  position: relative;
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+}
+.popup-country__current-list.active {
+  background-color: rgba(139, 139, 139, 0.1);
+}
+.popup-country__current-list.active::after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 7px;
+  border-left: 2px solid #242424;
+  border-bottom: 2px solid #242424;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  position: absolute;
+  right: 20px;
+  top: 14px;
+}
+.popup-country__current-flag {
+  width: 22px;
+  height: 22px;
+  margin-right: 12px;
+}
+.popup-country__current-currency {
+  width: 40px;
+  margin-right: 12px;
+  color: #8B8B8B;
+  text-transform: uppercase;
+}
+.popup-country__current-currency-name {
+  font-size: 16px;
+  line-height: 22px;
+  color: #242424;
+}
+
 @media only screen and (max-width: 1440px) {
   .container {
     padding: 0 15px;
@@ -1033,7 +1133,16 @@ body {
   .header {
     padding: 15px 0;
   }
-  .header__top {
+  .header__top-menu {
+    padding: 0;
+  }
+  .header__top-country-wrap {
+    display: none;
+  }
+  .header__top-location {
+    display: none;
+  }
+  .header__top-list-link {
     display: none;
   }
   .header__bot .hamburger {

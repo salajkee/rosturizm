@@ -244,6 +244,37 @@ window.addEventListener('DOMContentLoaded', () => {
     } catch(e) {}
 
     try {
+        const currencyChoose = document.querySelector('.header__bot-currency-choose');
+        const currencyList = document.querySelectorAll('.popup-country__current-list');
+        const headerFlag = document.querySelector('.header__bot-flag');
+        const headerCurrency = document.querySelector('.header__bot-currency');
+        const popupCountry = document.querySelector('.popup-country');
+        const popupCountryClose = document.querySelector('.popup-country__close-btn');
+
+        currencyChoose.addEventListener('click', () => {
+            popupCountry.classList.add('active');
+        });
+
+        popupCountryClose.addEventListener('click', () => {
+            popupCountry.classList.remove('active');
+        });
+        
+        currencyList.forEach(list => {
+            list.addEventListener('click', function() {
+                currencyList.forEach(listt => {
+                    listt.classList.remove('active');
+                });
+                this.classList.add('active');
+                let srcImg = this.children[0].getAttribute('src');
+                let currency = this.children[1];
+                headerFlag.children[0].setAttribute('src', srcImg);
+                headerCurrency.textContent = currency.textContent;
+                popupCountry.classList.remove('active');
+            });
+        });
+    } catch(e) {}
+
+    try {
         const swiper = new Swiper(".banner__slider", {
             slidesPerView: 1,
             fadeEffect: { crossFade: true },

@@ -614,6 +614,7 @@ body {
 .header .burger-menu__close-btn .close-icon {
   width: 22px;
   height: 22px;
+  fill: #ffffff;
 }
 .header .burger-menu.active {
   left: 0;

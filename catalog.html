@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/swiper-boundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>РосТуризм</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__wrapper">
+                    <div class="header__top">
+                        <ul class="header__top-menu">
+                            <li class="header__top-list header__top-country">
+                                <div class="header__top-country-wrap">
+                                    <span class="header__top-flag">
+                                        <img src="images/flags/rub.svg" alt="">
+                                    </span>
+                                    <span class="header__top-currency">RUB</span>
+                                </div>
+                                <div class="header__top-current-wrapper">
+                                    <ul class="header__top-current-menu">
+                                        <p class="header__top-current-country-title">Выберите валюту</p>
+                                        <li class="header__top-current-list active">
+                                            <img class="header__top-current-flag" src="images/flags/rub.svg" alt="">
+                                            <p class="header__top-current-currency">RUB</p>
+                                            <p class="header__top-current-currency-name">Российский рубль</p>
+                                        </li>
+                                        <li class="header__top-current-list">
+                                            <img class="header__top-current-flag" src="images/flags/kaz.svg" alt="">
+                                            <p class="header__top-current-currency">KAZ</p>
+                                            <p class="header__top-current-currency-name">Казахстанский тенге</p>
+                                        </li>
+                                        <li class="header__top-current-list">
+                                            <img class="header__top-current-flag" src="images/flags/byn.svg" alt="">
+                                            <p class="header__top-current-currency">BYN</p>
+                                            <p class="header__top-current-currency-name">Белорусский рубль</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="header__top-list header__top-location">
+                                <div class="header__top-location-icon">
+                                    <svg class="location-icon">
+                                        <use xlink:href="sprite.svg#location-icon"></use>
+                                    </svg>
+                                </div>
+                                <div class="header__top-location-current">Москва</div>
+                            </li>
+                            <li class="header__top-list header__top-list-link">
+                                <a href="#">Продавайте На РосТуризм</a>
+                            </li>
+                            <li class="header__top-list header__top-list-link">
+                                <a href="#">Работа</a>
+                            </li>
+                            <li class="header__top-list header__top-list-link">
+                                <a href="#">Путешевствие</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__bot">
+                        <div class="hamburger">
+                            <span></span>
+                        </div>
+                        <a href="#" class="header__bot-logo">
+                            <img src="images/logo.png" alt="">
+                            <p class="header__bot-logo-text">РосТуризм</p>
+                        </a>
+                        <form action="#" class="header__bot-search-form">
+                            <button class="header__bot-search-btn" type="submit">
+                                <svg class="search-icon">
+                                    <use xlink:href="sprite.svg#search-icon"></use>
+                                </svg>
+                            </button>
+                            <input class="header__bot-search-input" type="type" placeholder="Я ищу...">
+                        </form>
+                        <div class="header__bot-address-wrapper">
+                            <a href="#" class="header__bot-address">
+                                <svg class="address-icon">
+                                    <use xlink:href="sprite.svg#location-icon"></use>
+                                </svg>
+                                <p class="header__bot-address-text">
+                                    Адреса
+                                </p>
+                            </a>
+                            <div class="header__bot-address-num-wrapper">
+                                <div class="header__bot-address-num">
+                                    <span>25 823</span> пункта выдачи
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="header__bot-login">
+                            <svg class="pc-icon">
+                                <use xlink:href="sprite.svg#pc-icon"></use>
+                            </svg>
+                            <p class="header__bot-login-text">Войти</p>
+                        </a>
+                        <a href="#" class="header__bot-cart">
+                            <svg class="cart-icon">
+                                <use xlink:href="sprite.svg#cart-icon"></use>
+                            </svg>
+                            <p class="header__bot-cart-text">Корзина</p>
+                        </a>
+                        <div class="header__bot-currency-choose">
+                            <span class="header__bot-flag">
+                                <img src="images/flags/rub.svg" alt="">
+                            </span>
+                            <span class="header__bot-currency">RUB</span>
+                        </div>
+                        <div class="header__bot-location">
+                            <svg class="location-icon">
+                                <use xlink:href="sprite.svg#location-icon"></use>
+                            </svg>
+                        </div>
+                        <div class="header__bot-search">
+                            <svg class="search-icon">
+                                <use xlink:href="sprite.svg#search-icon"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="burger-menu__wrapper">
+                        <div class="burger-menu__overlay"></div>
+                        <button class="burger-menu__close-btn">
+                            <svg class="close-icon">
+                                <use xlink:href="sprite.svg#close-icon"></use>
+                            </svg>
+                        </button>
+                        <ul class="burger-menu">
+                            <li class="burger-menu__list" data-list="1">
+                                <a href="#" class="burger-menu__link">Садовая техника</a>
+                                <svg class="arrow-icon">
+                                    <use xlink:href="sprite.svg#botArrow-icon"></use>
+                                </svg>
+                            </li>
+                            <li class="burger-menu__list" data-list="2">
+                                <a href="#" class="burger-menu__link">Несадовая техника</a>
+                                <svg class="arrow-icon">
+                                    <use xlink:href="sprite.svg#botArrow-icon"></use>
+                                </svg>
+                            </li>
+                            <li class="burger-menu__list" data-list="3">
+                                <a href="#" class="burger-menu__link">Садовая техника</a>
+                                <svg class="arrow-icon">
+                                    <use xlink:href="sprite.svg#botArrow-icon"></use>
+                                </svg>
+                            </li>
+                        </ul>
+                        <ul class="burger-menu__first burger-menu__first-1">
+                            <p class="burger-menu__first-title">
+                                Садовая техника
+                                <svg class="arrow-prev">
+                                    <use xlink:href="sprite.svg#prev-icon"></use>
+                                </svg>
+                            </p>
+                            <li class="burger-menu__first-list" data-list="1">
+                                <a href="#" class="burger-menu__first-link">Садовая техника 1</a>
+                            </li>
+                            <li class="burger-menu__first-list" data-list="2">
+                                <a href="#" class="burger-menu__first-link">Садовая техника 2</a>
+                            </li>
+                        </ul>
+                        <ul class="burger-menu__first burger-menu__first-2">
+                            <p class="burger-menu__first-title">
+                                Несадовая техника
+                                <svg class="arrow-prev">
+                                    <use xlink:href="sprite.svg#prev-icon"></use>
+                                </svg>
+                            </p>
+                            <li class="burger-menu__first-list" data-list="1">
+                                <a href="#" class="burger-menu__first-link">Несадовая техника 1</a>
+                            </li>
+                            <li class="burger-menu__first-list" data-list="2">
+                                <a href="#" class="burger-menu__first-link">Несадовая техника 2</a>
+                            </li>
+                            <li class="burger-menu__first-list" data-list="3">
+                                <a href="#" class="burger-menu__first-link">Несадовая техника 3</a>
+                            </li>
+                        </ul>
+                        <ul class="burger-menu__second burger-menu__second-1">
+                            <p class="burger-menu__second-title">
+                                Садовая техника
+                                <svg class="arrow-prev">
+                                    <use xlink:href="sprite.svg#prev-icon"></use>
+                                </svg>
+                            </p>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                        </ul>
+                        <ul class="burger-menu__second burger-menu__second-3">
+                            <p class="burger-menu__second-title">
+                                Садовая техника 3
+                                <svg class="arrow-prev">
+                                    <use xlink:href="sprite.svg#prev-icon"></use>
+                                </svg>
+                            </p>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                            <li class="burger-menu__second-list">
+                                <a href="#" class="burger-menu__second-link">Меню 3</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="footer__item footer__buyers">
+                        <div class="footer__item-title footer__buyers-title">
+                            <div class="footer__item-title-text footer__buyers-title-text">Покупателям</div>
+                            <button class="footer__item-btn footer__buyers-btn">
+                                <svg class="arrow-icon">
+                                    <use xlink:href="sprite.svg#botArrow-icon"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="footer__item-menu footer__buyers-menu">
+                            <li class="footer__item-list footer__buyers-list">
+                                <a href="#" class="footer__item-link footer__buyers-link">Как сделать заказ</a>
+                            </li>
+                            <li class="footer__item-list footer__buyers-list">
+                                <a href="#" class="footer__item-link footer__buyers-link">Способы оплаты</a>
+                            </li>
+                            <li class="footer__item-list footer__buyers-list">
+                                <a href="#" class="footer__item-link footer__buyers-link">Доставка</a>
+                            </li>
+                            <li class="footer__item-list footer__buyers-list">
+                                <a href="#" class="footer__item-link footer__buyers-link">Возврат товара</a>
+                            </li>
+                            <li class="footer__item-list footer__buyers-list">
+                                <a href="#" class="footer__item-link footer__buyers-link">Возврат денежных средств</a>
+                            </li>
+                            <li class="footer__item-list footer__buyers-list">
+                                <a href="#" class="footer__item-link footer__buyers-link">Правила продажи</a>
+                            </li>
+                            <li class="footer__item-list footer__buyers-list">
+                                <a href="#" class="footer__item-link footer__buyers-link">Правила пользования торговой площадкой</a>
+                            </li>
+                            <li class="footer__item-list footer__buyers-list">
+                                <a href="#" class="footer__item-link footer__buyers-link">Вопросы и ответы</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__inner">
+                        <div class="footer__item footer__partners">
+                            <div class="footer__item-title footer__partners-title">
+                                <div class="footer__item-title-text footer__partners-title-text">Партнерам</div>
+                                <button class="footer__item-btn footer__partners-btn">
+                                    <svg class="arrow-icon">
+                                        <use xlink:href="sprite.svg#botArrow-icon"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <ul class="footer__item-menu footer__partners-menu">
+                                <li class="footer__item-list footer__partners-list">
+                                    <a href="#" class="footer__item-link footer__partners-link">Продавайте на РосТуризм</a>
+                                </li>
+                                <li class="footer__item-list footer__partners-list">
+                                    <a href="#" class="footer__item-link footer__partners-link">Перевозчикам</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__item footer__projects">
+                            <div class="footer__item-title footer__projects-title">
+                                <div class="footer__item-title-text footer__projects-title-text">Наши проекты</div>
+                                <button class="footer__item-btn footer__projects-btn">
+                                    <svg class="arrow-icon">
+                                        <use xlink:href="sprite.svg#botArrow-icon"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <ul class="footer__item-menu footer__projects-menu">
+                                <li class="footer__item-list footer__projects-list">
+                                    <a href="#" class="footer__item-link footer__projects-link">Трудоустройство</a>
+                                </li>
+                                <li class="footer__item-list footer__projects-list">
+                                    <a href="#" class="footer__item-link footer__projects-link">Цифровые товары</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__item footer__company">
+                        <div class="footer__item-title footer__company-title">
+                            <div class="footer__item-title-text footer__company-title-text">Компания</div>
+                            <button class="footer__item-btn footer__company-btn">
+                                <svg class="arrow-icon">
+                                    <use xlink:href="sprite.svg#botArrow-icon"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="footer__item-menu footer__company-menu">
+                            <li class="footer__item-list footer__company-list">
+                                <a href="#" class="footer__item-link footer__company-link">О нас</a>
+                            </li>
+                            <li class="footer__item-list footer__company-list">
+                                <a href="#" class="footer__item-link footer__company-link">Реквизиты</a>
+                            </li>
+                            <li class="footer__item-list footer__company-list">
+                                <a href="#" class="footer__item-link footer__company-link">Пресс-центр</a>
+                            </li>
+                            <li class="footer__item-list footer__company-list">
+                                <a href="#" class="footer__item-link footer__company-link">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__item footer__socials">
+                        <div class="footer__item-title footer__socials-title">
+                            <div class="footer__item-title-text footer__socials-title-text">Мы в соцсетях</div>
+                            <button class="footer__item-btn footer__socials-btn">
+                                <svg class="arrow-icon">
+                                    <use xlink:href="sprite.svg#botArrow-icon"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <ul class="footer__item-menu footer__socials-menu">
+                            <li class="footer__item-list footer__socials-list">
+                                <a href="#" class="footer__item-link footer__socials-link">Вконтакте</a>
+                            </li>
+                            <li class="footer__item-list footer__socials-list">
+                                <a href="#" class="footer__item-link footer__socials-link">Одноклассники</a>
+                            </li>
+                            <li class="footer__item-list footer__socials-list">
+                                <a href="#" class="footer__item-link footer__socials-link">YouTube</a>
+                            </li>
+                            <li class="footer__item-list footer__socials-list">
+                                <a href="#" class="footer__item-link footer__socials-link">Телеграм</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__item footer__mob-devices">
+                        <div class="footer__item-title footer__mob-devices-title">
+                            <div class="footer__item-title-text footer__mob-devices-title-text">Мобильные устройства</div>
+                        </div>
+                        <ul class="footer__item-menu footer__mob-devices-menu">
+                            <li class="footer__item-list footer__mob-devices-list">
+                                <a href="#" class="footer__item-link footer__mob-devices-link">
+                                    <img src="images/mobile_devices/googlePlay.png" alt="">
+                                </a>
+                            </li>
+                            <li class="footer__item-list footer__mob-devices-list">
+                                <a href="#" class="footer__item-link footer__mob-devices-link">
+                                    <img src="images/mobile_devices/appStore.png" alt="">
+                                </a>
+                            </li>
+                            <li class="footer__item-list footer__mob-devices-list">
+                                <a href="#" class="footer__item-link footer__mob-devices-link">
+                                    <img src="images/mobile_devices/appGallery.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__bot">
+                        <div class="footer__bot-copyright">2022 © РосТуризм</div>
+                        <a href="#" class="footer__bot-link">Проверка совместимости</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="popup-country">
+            <button class="popup-country__close-btn">
+                <svg class="close-icon">
+                    <use xlink:href="sprite.svg#close-icon"></use>
+                </svg>
+            </button>
+            <ul class="popup-country__current-menu">
+                <p class="popup-country__current-country-title">Выберите валюту</p>
+                <li class="popup-country__current-list active">
+                    <img class="popup-country__current-flag" src="images/flags/rub.svg" alt="">
+                    <p class="popup-country__current-currency">RUB</p>
+                    <p class="popup-country__current-currency-name">Российский рубль</p>
+                </li>
+                <li class="popup-country__current-list">
+                    <img class="popup-country__current-flag" src="images/flags/kaz.svg" alt="">
+                    <p class="popup-country__current-currency">KAZ</p>
+                    <p class="popup-country__current-currency-name">Казахстанский тенге</p>
+                </li>
+                <li class="popup-country__current-list">
+                    <img class="popup-country__current-flag" src="images/flags/byn.svg" alt="">
+                    <p class="popup-country__current-currency">BYN</p>
+                    <p class="popup-country__current-currency-name">Белорусский рубль</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="popup-search">
+            <div class="popup-search__content">
+                <div class="popup-search__input">
+                    <form action="#" class="popup-search__form">
+                        <input class="popup-search__form-input" type="text">
+                    </form>
+                    <button class="popup-search__close-btn">отмена</button>
+                </div>
+                <div class="popup-search__autocomplete">
+                    <ul class="popup-search__autocomplete-list">
+                        <li class="popup-search__autocomplete-item">
+                            <p class="popup-search__autocomplete-text">
+                                <span class="popup-search__autocomplete-icon">
+                                    <svg class="search-icon">
+                                        <use xlink:href="sprite.svg#search-icon"></use>
+                                    </svg>
+                                </span>
+                                <span class="popup-search__autocomplete-phrase">Бассейны</span>
+                            </p>
+                        </li>
+                        <li class="popup-search__autocomplete-item">
+                            <p class="popup-search__autocomplete-text">
+                                <span class="popup-search__autocomplete-icon">
+                                    <svg class="search-icon">
+                                        <use xlink:href="sprite.svg#search-icon"></use>
+                                    </svg>
+                                </span>
+                                <span class="popup-search__autocomplete-phrase">Бассейны</span>
+                            </p>
+                        </li>
+                        <li class="popup-search__autocomplete-item">
+                            <p class="popup-search__autocomplete-text">
+                                <span class="popup-search__autocomplete-icon">
+                                    <svg class="search-icon">
+                                        <use xlink:href="sprite.svg#search-icon"></use>
+                                    </svg>
+                                </span>
+                                <span class="popup-search__autocomplete-phrase">Бассейны</span>
+                            </p>
+                        </li>
+                        <li class="popup-search__autocomplete-item">
+                            <p class="popup-search__autocomplete-text">
+                                <span class="popup-search__autocomplete-icon">
+                                    <svg class="search-icon">
+                                        <use xlink:href="sprite.svg#search-icon"></use>
+                                    </svg>
+                                </span>
+                                <span class="popup-search__autocomplete-phrase">Бассейны</span>
+                            </p>
+                        </li>
+                        <li class="popup-search__autocomplete-item">
+                            <p class="popup-search__autocomplete-text">
+                                <span class="popup-search__autocomplete-icon">
+                                    <svg class="search-icon">
+                                        <use xlink:href="sprite.svg#search-icon"></use>
+                                    </svg>
+                                </span>
+                                <span class="popup-search__autocomplete-phrase">Бассейны</span>
+                            </p>
+                        </li>
+                        <li class="popup-search__autocomplete-item">
+                            <p class="popup-search__autocomplete-text">
+                                <span class="popup-search__autocomplete-icon">
+                                    <svg class="search-icon">
+                                        <use xlink:href="sprite.svg#search-icon"></use>
+                                    </svg>
+                                </span>
+                                <span class="popup-search__autocomplete-phrase">Бассейны</span>
+                            </p>
+                        </li>
+                        <li class="popup-search__autocomplete-item">
+                            <p class="popup-search__autocomplete-text">
+                                <span class="popup-search__autocomplete-icon">
+                                    <svg class="search-icon">
+                                        <use xlink:href="sprite.svg#search-icon"></use>
+                                    </svg>
+                                </span>
+                                <span class="popup-search__autocomplete-phrase">Бассейны</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar-mobile">
+            <a href="#" class="navbar-mobile__link navbar-mobile__home active">
+                <svg class="home-icon navbar-icon">
+                    <use xlink:href="sprite.svg#home-icon"></use>
+                </svg>
+            </a>
+            <a href="#" class="navbar-mobile__link navbar-mobile__menu">
+                <svg class="menu-icon navbar-icon">
+                    <use xlink:href="sprite.svg#menu-icon"></use>
+                </svg>
+            </a>
+            <a href="#" class="navbar-mobile__link">
+                <svg class="cart-icon navbar-icon">
+                    <use xlink:href="sprite.svg#cart-icon"></use>
+                </svg>
+            </a>
+            <a href="#" class="navbar-mobile__link">
+                <svg class="favorite-icon navbar-icon">
+                    <use xlink:href="sprite.svg#favorite-icon"></use>
+                </svg>
+            </a>
+            <a href="#" class="navbar-mobile__link">
+                <svg class="pc-icon navbar-icon">
+                    <use xlink:href="sprite.svg#pc-icon"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <script src="js/swiper-boundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -67,8 +67,9 @@ $white: #ffffff;
         display: flex;
         align-items: center;
         &-menu {
-            padding: 15px 0;
+            padding: 5px 0 15px;
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             cursor: pointer;
         }
@@ -162,6 +163,7 @@ $white: #ffffff;
         }
         &-location {
             margin-left: 32px;
+            margin-right: 32px;
             display: flex;
             align-items: center;
             cursor: pointer;
@@ -176,8 +178,11 @@ $white: #ffffff;
                 color: $textBlue;
             }
         }
+        &-list {
+            margin-top: 10px;
+        }
         &-list-link {
-            margin-left: 32px;
+            margin-right: 32px;
             a {
                 display: block;
                 padding: 1px 12px 3px;
@@ -976,18 +981,7 @@ $white: #ffffff;
     .header {
         padding: 15px 0;
         &__top {
-            &-menu {
-                padding: 0;
-            }
-            &-country-wrap {
-                display: none;
-            }
-            &-location {
-                display: none;
-            }
-            &-list-link {
-                display: none;
-            }
+            display: none;
         }
         &__bot {
             .hamburger {

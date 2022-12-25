@@ -137,10 +137,12 @@ body {
           align-items: center;
 }
 .header__top-menu {
-  padding: 15px 0;
+  padding: 5px 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -248,6 +250,7 @@ body {
 }
 .header__top-location {
   margin-left: 32px;
+  margin-right: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -266,8 +269,11 @@ body {
   font-size: 14px;
   color: #275080;
 }
+.header__top-list {
+  margin-top: 10px;
+}
 .header__top-list-link {
-  margin-left: 32px;
+  margin-right: 32px;
 }
 .header__top-list-link a {
   display: block;
@@ -1216,16 +1222,7 @@ body {
   .header {
     padding: 15px 0;
   }
-  .header__top-menu {
-    padding: 0;
-  }
-  .header__top-country-wrap {
-    display: none;
-  }
-  .header__top-location {
-    display: none;
-  }
-  .header__top-list-link {
+  .header__top {
     display: none;
   }
   .header__bot .hamburger {

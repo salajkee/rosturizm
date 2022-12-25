@@ -275,6 +275,20 @@ window.addEventListener('DOMContentLoaded', () => {
     } catch(e) {}
 
     try {
+        const popupSearch = document.querySelector('.popup-search');
+        const popupSearchClose = document.querySelector('.popup-search__close-btn');
+        const headerSearchBtn = document.querySelector('.header__bot-search');
+
+        headerSearchBtn.addEventListener('click', () => {
+            popupSearch.classList.add('active');
+        });
+
+        popupSearchClose.addEventListener('click', () => {
+            popupSearch.classList.remove('active');
+        });
+    } catch(e) {}
+
+    try {
         const swiper = new Swiper(".banner__slider", {
             slidesPerView: 1,
             fadeEffect: { crossFade: true },

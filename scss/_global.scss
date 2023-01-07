@@ -40,6 +40,94 @@ $white: #ffffff;
     overflow: hidden;
 }
 
+.breadcrumbs {
+    margin: 65px 0 15px;
+    &__list {
+        padding-left: 0;
+        display: flex;
+    }
+    &__link {
+        margin-right: 10px;
+        font-size: 14px;
+        color: $grayColor;
+        user-select: none;
+        a {
+            color: $grayColor;
+            &::after {
+                content: "/";
+                position: relative;
+                left: 6px;
+            }
+        }
+    }
+}
+
+.custom__checkbox {
+    &-input {
+        margin: 0;
+        display: none;
+        &:checked + .custom__checkbox-fake::before {
+            opacity: 1;
+        }
+    }
+    &-fake {
+        min-width: 22px;
+        min-height: 22px;
+        width: 22px;
+        height: 22px;
+        position: relative;
+        background: #FFFFFF;
+        border: 1px solid #D5D5D5;
+        border-radius: 6px;
+        &::before {
+            content: url(../images/checkbox.svg);
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 6px;
+            opacity: 0;
+            transition: all .3s;
+            background-color: $blueColor;
+        }
+    }
+}
+
+.custom__radio {
+    &-input {
+        margin: 0;
+        display: none;
+        &:checked + .custom__radio-fake::before {
+            opacity: 1;
+        }
+    }
+    &-fake {
+        min-width: 22px;
+        min-height: 22px;
+        width: 22px;
+        height: 22px;
+        position: relative;
+        background: #FFFFFF;
+        border: 1px solid #D5D5D5;
+        border-radius: 50%;
+        &::before {
+            content: '';
+            width: 11px;
+            height: 11px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $blueColor;
+            border-radius: 50%;
+            opacity: 0;
+            transition: all .3s;
+        }
+    }
+}
+
 .show__more {
     margin: 35px auto 70px;
     display: flex;

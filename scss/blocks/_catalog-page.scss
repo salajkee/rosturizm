@@ -1,0 +1,154 @@
+.catalog-page {
+    .catalog {
+        &__title {
+            font-size: 28px;
+            font-weight: 700;
+            color: $textColor;
+        }
+        &__wrapper {
+            margin-top: 25px;
+            display: flex;
+        }
+        .categories {
+            max-width: 252px;
+            min-width: 252px;
+            width: 100%;
+            background-color: $white;
+            &__title {
+                font-size: 18px;
+                font-weight: 700;
+                color: $textColor;
+            }
+            &__list {
+                margin-top: 50px;
+                li {
+                    padding: 7px 0;
+                }
+            }
+            &__link {
+                font-size: 16px;
+                color: $grayColor;
+            }
+        }
+        &__content {
+            width: calc(100% - 272px);
+            margin-left: auto;
+        }
+    }
+    .banners {
+        margin-top: 32px;
+        &__items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        &__item {
+            width: 100%;
+            height: 275px;
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all .3s linear;
+            &:hover {
+                .banners__item-overlay {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                .banners__item-img {
+                    transform: scale(1.05);
+                }
+            }
+            &-img {
+                transition: transform .3s linear;
+            }
+            &-overlay {
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgba(#000, .3);
+                transition: opacity .3s linear;
+                opacity: 0;
+            }
+        }
+    }
+    .catalog-goods {
+        margin-top: 32px;
+        position: relative;
+        &__title {
+            font-size: 23px;
+            font-weight: 700;
+            color: $textColor;
+        }
+        &__slider {
+            margin-top: 23px;
+            overflow: hidden;
+            &-btn-prev {
+                position: absolute;
+                top: 50%;
+                left: -24px;
+                transform: translateY(calc(-50% - 19px));
+                width: 48px;
+                height: 48px;
+                cursor: pointer;
+                z-index: 1;
+                transition: background-color .3s;
+                border-radius: 50%;
+                background-color: $white;
+                box-shadow: 0 0 12px rgb(0 0 0 / 10%);
+                &.swiper-button-disabled {
+                    opacity: 0;
+                }
+                &:hover {
+                    .prev-btn {
+                        fill: $textBlue;
+                    }
+                }
+                .prev-btn {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 18px;
+                    height: 18px;
+                    fill: $textColor;
+                    transition: fill .3s;
+                }
+            }
+            &-btn-next {
+                position: absolute;
+                top: 50%;
+                right: -24px;
+                transform: translateY(calc(-50% - 19px));
+                width: 48px;
+                height: 48px;
+                cursor: pointer;
+                z-index: 1;
+                transition: background-color .3s;
+                border-radius: 50%;
+                background-color: $white;
+                box-shadow: 0 0 12px rgb(0 0 0 / 10%);
+                &.swiper-button-disabled {
+                    opacity: 0;
+                }
+                &:hover {
+                    .next-btn {
+                        fill: $textBlue;
+                    }
+                }
+                .next-btn {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 18px;
+                    height: 18px;
+                    fill: $textColor;
+                    transition: fill .3s;
+                }
+            }
+        }
+    }
+}

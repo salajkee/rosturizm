@@ -309,6 +309,39 @@ window.addEventListener('DOMContentLoaded', () => {
     } catch(e){}
 
     try {
+        const swiper = new Swiper(".catalog-goods__slider1", {
+            slidesPerView: 5.5,
+            speed: 800,
+            slidesPerGroup: 5,
+            spaceBetween: 32,
+            navigation: {
+                nextEl: ".catalog-goods__slider-btn-next1",
+                prevEl: ".catalog-goods__slider-btn-prev1",
+            }
+        });
+        const swiper2 = new Swiper(".catalog-goods__slider2", {
+            slidesPerView: 5.5,
+            speed: 800,
+            slidesPerGroup: 5,
+            spaceBetween: 32,
+            navigation: {
+                nextEl: ".catalog-goods__slider-btn-next2",
+                prevEl: ".catalog-goods__slider-btn-prev2",
+            }
+        });
+        const swiper3 = new Swiper(".catalog-goods__slider3", {
+            slidesPerView: 5.5,
+            speed: 800,
+            slidesPerGroup: 5,
+            spaceBetween: 32,
+            navigation: {
+                nextEl: ".catalog-goods__slider-btn-next3",
+                prevEl: ".catalog-goods__slider-btn-prev3",
+            }
+        });
+    } catch(e){}
+
+    try {
         const screenWidth = window.screen.width;
 
         if(screenWidth < 960) {
